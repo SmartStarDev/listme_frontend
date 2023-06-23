@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  @apply text-typo;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F7F7;
+}
+
+::-webkit-scrollbar {
+  @apply w-1.5
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ink-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ink-500;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ink-400;
+}
+
+input[type="checkbox"]:checked + div {
+  @apply bg-primary border-primary !important;
+}
+input[type="checkbox"]:checked + div svg {
+  @apply block;
+}
+
+.quill {
+  margin-top: -20px;
+}
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+  margin-left: -16px;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.ql-active, .ql-active * {
+  color: #48A9A6 !important;
+  stroke: #48A9A6 !important;
+}
+
+.ql-snow.ql-toolbar button:hover * {
+  color: #48A9A6 !important;
+  stroke: #48A9A6 !important;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
